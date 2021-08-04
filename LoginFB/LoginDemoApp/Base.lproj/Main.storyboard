@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P1v-fV-5Hm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" id="BYZ-38-t0r" customClass="LoginViewController" customModule="LoginDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HB4-zX-87o" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="145" y="313.5" width="124" height="269"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <state key="normal" title="fb in">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="fbClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TqW-cg-tBP"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="izT-fR-MwJ">
+                                <rect key="frame" x="96" y="140" width="222" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="z0r-s8-iyj"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HB4-zX-87o" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9pB-rw-yxv"/>
+                            <constraint firstItem="izT-fR-MwJ" firstAttribute="centerX" secondItem="HB4-zX-87o" secondAttribute="centerX" id="AmE-W3-wO2"/>
+                            <constraint firstItem="izT-fR-MwJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96" id="BaU-hR-avc"/>
+                            <constraint firstItem="HB4-zX-87o" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="HQC-um-aXa"/>
+                            <constraint firstItem="HB4-zX-87o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KWq-5E-sp0"/>
+                            <constraint firstItem="HB4-zX-87o" firstAttribute="top" secondItem="izT-fR-MwJ" secondAttribute="bottom" constant="45.5" id="Ula-Nf-He4"/>
+                            <constraint firstItem="HB4-zX-87o" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="ksg-FA-1P9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bAI-lK-bxX"/>
+                    <connections>
+                        <outlet property="btnFacebook" destination="HB4-zX-87o" id="dHj-nw-6Ef"/>
+                        <outlet property="profileimgView" destination="izT-fR-MwJ" id="zeN-rL-yGr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1015.9420289855074" y="72.991071428571431"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="j31-RI-cGP">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="lU1-wT-BG4" customClass="ProfileViewController" customModule="LoginDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oHN-as-K6k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tg-R8-bR0">
+                                <rect key="frame" x="145" y="313.5" width="124" height="269"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <state key="normal" title="out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xh-Of-3KJ">
+                                <rect key="frame" x="186.5" y="271" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J98-0o-mLY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9tg-R8-bR0" firstAttribute="top" secondItem="8xh-Of-3KJ" secondAttribute="bottom" constant="22" id="3JE-O6-ciC"/>
+                            <constraint firstItem="8xh-Of-3KJ" firstAttribute="centerX" secondItem="9tg-R8-bR0" secondAttribute="centerX" id="7lJ-2h-jT4"/>
+                            <constraint firstItem="9tg-R8-bR0" firstAttribute="centerY" secondItem="oHN-as-K6k" secondAttribute="centerY" id="Bh8-Ur-RBp"/>
+                            <constraint firstItem="9tg-R8-bR0" firstAttribute="width" secondItem="oHN-as-K6k" secondAttribute="width" multiplier="0.3" id="RRM-6h-vSr"/>
+                            <constraint firstItem="9tg-R8-bR0" firstAttribute="centerX" secondItem="oHN-as-K6k" secondAttribute="centerX" id="iEF-yd-n2w"/>
+                            <constraint firstItem="9tg-R8-bR0" firstAttribute="height" secondItem="oHN-as-K6k" secondAttribute="height" multiplier="0.3" id="tzh-qQ-N8q"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A1N-WL-Tzt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1821.7391304347827" y="72.991071428571431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3R6-e6-Iyn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P1v-fV-5Hm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="szx-gi-367">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ide-BP-Yqs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Af8-EH-feZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="105.79710144927537" y="72.991071428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
